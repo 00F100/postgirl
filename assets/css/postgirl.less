@@ -1,52 +1,57 @@
 @bege: #E8E0CB;
 @dark-grey: #464646;
+@medium-grey: #F3F3F3;
 @light-grey: #BBB;
 @white: #FFF;
 @orange: #ff9b21;
 @black: #000;
 
 html, body {
-	margin: 0px;
-	padding: 0px;
-	background: @bege;
-	color: @light-grey;
+    margin: 0px;
+    padding: 0px;
+    background: @bege;
+    color: @light-grey;
 }
 
 .nav-bar-top {
-	height: 51px;
-	background: @dark-grey;
+    height: 51px;
+    background: @dark-grey;
 }
 
 .input-filter {
-	border-radius: 20px;
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20px;
-	border: 1px solid #CCC;
-	font-size: 14px;
-	margin-top: 10px;
-	margin-left: 10px;
-	padding: 5px;
-	width: 100%;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border: 1px solid #CCC;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    width: 100%;
 }
 
 .sidebar {
-	background: @white;
+    background: @medium-grey;
+    padding-right: 0px;
 
-	.buttons {
-		ul {
-			margin: 0px;
+    .sidebar-tabs {
+        margin: 0px;
 
-			li {
-				list-style: none;
-				padding: 6px;
-				font-size: 15px;
-				text-align: center;
-			}
+        ul {
+            padding-left: 0px;
+            margin: 0px;
+            
+            li {
+                list-style: none;
+                padding: 6px;
+                font-size: 15px;
+                text-align: center;
+            }
+        }
 
-			li.selected {
-				border-bottom: 3px solid @orange;
-				color: @black;
-			}
-		}
-	}
+        li.selected {
+            border-bottom: 3px solid @orange;
+            color: @black;
+        }
+    }
 }

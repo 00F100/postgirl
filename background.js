@@ -1,6 +1,6 @@
 chrome.browserAction.onClicked.addListener(function(tab) {
 	chrome.windows.create({
-		'url': 'fpostman.html',
+		'url': 'layout/index.html',
 		'type': 'popup',
 		'left': 0,
 		'top': 0,
