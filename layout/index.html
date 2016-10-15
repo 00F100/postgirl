@@ -1,7 +1,8 @@
 <html>
     <head>
         <title>FREE Postman</title>
-        <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" type="text/css" />
         <link rel="stylesheet" href="../assets/css/postgirl.css" type="text/css" />
     </head>
     <body>
@@ -11,7 +12,14 @@
         <div class="row">
             <div class="col-md-3 sidebar">
                 <div class="filter">
-                    <input class="input-filter" type="text" placeholder="Filter">
+                    <div class="filter-icon">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+                    <div class="input-text">
+                        <input class="input-filter" type="text" placeholder="Filter">
+                    </div>
+                    <div class="filter-icon-end">
+                    </div>
                 </div>
                 <div class="sidebar-tabs">
                     <ul>

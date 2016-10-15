@@ -1,0 +1,10 @@
+{
+  "name": "Postgirl",
+  "description": "Free API Requester with localhost sync to team",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "latest",
+    "font-awesome": "latest",
+    "bootstrap": "latest"
+  }
+}

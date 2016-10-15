@@ -3,22 +3,11 @@ body {
   margin: 0px;
   padding: 0px;
   background: #E8E0CB;
-  color: #BBB;
+  color: #A9A9A9;
 }
 .nav-bar-top {
   height: 51px;
   background: #464646;
-}
-.input-filter {
-  border-radius: 20px;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  border: 1px solid #CCC;
-  font-size: 14px;
-  margin-top: 10px;
-  margin-left: 10px;
-  padding: 5px;
-  width: 100%;
 }
 .sidebar {
   background: #F3F3F3;
@@ -34,10 +23,58 @@ body {
 .sidebar .sidebar-tabs ul li {
   list-style: none;
   padding: 6px;
-  font-size: 15px;
+  font-size: 14px;
   text-align: center;
+  font-family: OpenSans, Helvetica, Arial, sans-serif;
 }
 .sidebar .sidebar-tabs li.selected {
-  border-bottom: 3px solid #ff9b21;
-  color: #000;
+  border-bottom: 3px solid #F47023;
+  font-weight: 400;
+  color: #464646;
+}
+.sidebar .filter {
+  padding: 5px 10px 0 10px;
+}
+.sidebar .filter .filter-icon,
+.sidebar .filter .filter-icon-end {
+  position: absolute;
+  background: #FFF;
+  width: 30px;
+  height: 31px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.sidebar .filter .filter-icon .fa,
+.sidebar .filter .filter-icon-end .fa {
+  margin: 8px 0 0px 8px;
+}
+.sidebar .filter .filter-icon-end {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  right: 10px;
+}
+.sidebar .filter .input-text:focus {
+  border: none;
+}
+.sidebar .filter .input-text {
+  float: left;
+  margin-left: 30px;
+  width: 100%;
+  height: 31px;
+  overflow: hidden;
+  position: relative;
+  padding-right: 50px;
+}
+.sidebar .filter .input-text input {
+  font-size: 14px;
+  font-family: OpenSans, Helvetica, Arial, sans-serif;
+  height: 35px;
+  box-sizing: content-box;
+  border: #505050;
+  width: 100%;
+  margin: -2px 0 0 -2px;
+  padding-left: 3px;
+}
+.sidebar .filter .input-text input:focus {
+  border: none;
 }
