@@ -1,7 +1,7 @@
-;"use strict";
-
 // Dependency of app.js
-define(['jquery', 'bootstrap', 'angular', 'ngRoute', 'ngMaterial', 'app'], function($, bootstrap, angular, ngRoute, ngMaterial){
+;define(['homeController', 'collectionsController', 'historyController', 'angular'], function(homeController, collectionsController, historyController){
+
+	"use strict";
 	
 	var app = {
 
@@ -9,25 +9,40 @@ define(['jquery', 'bootstrap', 'angular', 'ngRoute', 'ngMaterial', 'app'], funct
 		// Start the application
 		init: function(){
 			this.initAngular();
-			// this.initRouter();
+			this.initRouter();
 		},
 
 		initAngular: function(){
-			this.app = angular.module('app', ['ngMaterial']);
-			this.app.controller('homeController', this.homeController);
+
+			// Init module app
+			this.app = angular.module('app', ['ngRoute', 'ngMaterial']);
+			
+			// Add controllers
+			this.app.controller('homeController', homeController);
+			this.app.controller('collectionsController', collectionsController);
+			this.app.controller('historyController', historyController);
+
+			// Start Angular.js
 			angular.element(function() {
 				angular.bootstrap(document, ['app']);
 			});
 		},
 
 		initRouter: function(){
-			// $rootScope.$on('$routeChangeSuccess', function(event, current) {
-			// 	$scope.currentLink = getCurrentLinkFromRoute(current);
-			// });
-		},
-
-		homeController: function($scope){
-			$scope.currentNavItem = 'collections';
+			this.app.config(function ($routeProvider) {
+		        $routeProvider.when("/", {
+		            templateUrl: 'views/home/collections.html',
+		            controller: 'homeController'
+		        });
+		        $routeProvider.when("/home/collections", {
+		            templateUrl: 'views/home/collections.html',
+		            controller: 'collectionsController'
+		        });
+		        $routeProvider.when("/home/history", {
+		            templateUrl: 'views/home/history.html',
+		            controller: 'historyController'
+		        });
+		    });
 		}
 	}
 

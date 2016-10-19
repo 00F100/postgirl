@@ -7,6 +7,13 @@ requirejs.config({
 	// Base path of scripts
     baseUrl: '../',
     paths: {
+
+        // Controllers
+        homeController: 'src/controllers/HomeController',
+        collectionsController: 'src/controllers/CollectionsController',
+        historyController: 'src/controllers/HistoryController',
+
+
     	// jQuery minify
         jquery: 'node_modules/jquery/dist/jquery.min',
         // Bootstrap minify
@@ -63,6 +70,17 @@ requirejs.config({
         app: {
             deps: ['ngMaterial'],
             exports: 'app'
+        },
+
+        // Export Controllers
+        homeController: {
+            exports: 'homeController'
+        },
+        collectionsController: {
+            exports: 'collectionsController'
+        },
+        historyController: {
+            exports: 'historyController'
         }
     }
 });

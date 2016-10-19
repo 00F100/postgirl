@@ -27,22 +27,20 @@
 
                 <!-- Options Sidebar -->
                 <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation collections">
-                    <md-nav-item md-nav-click="goto('history')" name="history">History</md-nav-item>
-                    <md-nav-item md-nav-click="goto('collections')" name="collections">Collections</md-nav-item>
+                    <md-nav-item  md-nav-href="#home/history" name="history">History</md-nav-item>
+                    <md-nav-item  md-nav-href="#home/collections" name="collections">Collections</md-nav-item>
                 </md-nav-bar>
                 <!-- / Options Sidebar -->
 
                 <!-- Content Sidebar -->
-                <md-content>
-                    External content for `<span>{{currentNavItem}}</span>`
-                </md-content>
+                <md-content ng-view="view-a"></md-content>
                 <!-- / Content Sidebar -->
 
             </md-sidenav>
             <!-- / Sidebar -->
 
             <!-- Content -->
-            <md-content flex id="content">
+            <md-content flex id="content" ng-view="view-b">
                 content
             </md-content>
             <!-- / Content -->
