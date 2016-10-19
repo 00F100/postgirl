@@ -1,33 +1,51 @@
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../node_modules/angular-material/angular-material.min.css">
+
+        <!-- Bootstrap, Font Awesome, Angular Material -->
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="../node_modules/angular-material/angular-material.min.css" />
+
+        <!-- Require.js -->
         <script data-main="main" src="../node_modules/requirejs/require.js"></script>
     </head>
     <body ng-cloak layout="column">
+
+        <!-- Topbar -->
         <md-toolbar layout="row" class="md-toolbar-tools">
             <h1>Postgirl</h1>
         </md-toolbar>
+        <!-- / Topbar -->
 
         <div flex layout="row" ng-controller="homeController">
+
+            <!-- Sidebar -->
             <md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp">
+
+                <!-- Options Sidebar -->
                 <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation collections">
                     <md-nav-item md-nav-click="goto('history')" name="history">History</md-nav-item>
                     <md-nav-item md-nav-click="goto('collections')" name="collections">Collections</md-nav-item>
                 </md-nav-bar>
+                <!-- / Options Sidebar -->
 
+                <!-- Content Sidebar -->
                 <md-content>
                     External content for `<span>{{currentNavItem}}</span>`
                 </md-content>
-            </md-sidenav>
+                <!-- / Content Sidebar -->
 
+            </md-sidenav>
+            <!-- / Sidebar -->
+
+            <!-- Content -->
             <md-content flex id="content">
                 content
             </md-content>
+            <!-- / Content -->
         </div>
     </body>
 </html>
