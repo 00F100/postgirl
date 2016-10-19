@@ -1,5 +1,10 @@
-;// Configure Require.js
+;"use strict";
+
+// Configure Require.js
 requirejs.config({
+	// Clean cache of javascript's...
+	urlArgs: "v=" + new Date().getTime(),
+	// Base path of scripts
     baseUrl: '../',
     paths: {
     	// jQuery minify
@@ -9,11 +14,13 @@ requirejs.config({
         // Angular.js minify
         angular: 'node_modules/angular/angular.min',
         // Angular.js Material
-        angularmaterial: 'node_modules/angular-material/angular-material.min',
+        ngRoute: 'node_modules/angular-route/angular-route.min',
         // Angular.js Animate
-        angularanimate: 'node_modules/angular-animate/angular-animate.min',
+        ngAnimate: 'node_modules/angular-animate/angular-animate.min',
         // Angular.js Animate
-        angulararia: 'node_modules/angular-aria/angular-aria.min',
+        ngAria: 'node_modules/angular-aria/angular-aria.min',
+        // Angular.js Material
+        ngMaterial: 'node_modules/angular-material/angular-material.min',
         // The application
         app: 'src/app'
     },
@@ -27,29 +34,34 @@ requirejs.config({
             deps: ['jquery'],
             exports: 'bootstrap'
         },
-        // Export Angular.js - depends "jquery"
+        // Export Angular.js - depends "jquery, ngRoute"
         angular: {
             deps: ['jquery'],
             exports: 'angular'
         },
-        // Export Angular.js Animate - depends "jquery"
-        angularanimate: {
+        // Export Angular.js Animate - depends "angular"
+        ngRoute: {
             deps: ['angular'],
-            exports: 'angularanimate'
+            exports: 'ngRoute'
         },
-        // Export Angular.js Aria - depends "jquery"
-        angulararia: {
+        // Export Angular.js Animate - depends "angular"
+        ngAnimate: {
             deps: ['angular'],
-            exports: 'angulararia'
+            exports: 'ngAnimate'
         },
-        // Export Angular.js Material - depends "angular"
-        angularmaterial: {
-            deps: ['angularanimate', 'angulararia'],
-            exports: 'angularmaterial'
+        // Export Angular.js Aria - depends "angular"
+        ngAria: {
+            deps: ['angular'],
+            exports: 'ngAria'
         },
-        // Export Angular.js Material - depends "angular"
+        // Export Angular.js Material - depends "ngAnimate, ngAria"
+        ngMaterial: {
+            deps: ['ngAnimate', 'ngAria', 'ngRoute'],
+            exports: 'ngMaterial'
+        },
+        // Export Angular.js Material - depends "ngMaterial"
         app: {
-            deps: ['angularmaterial'],
+            deps: ['ngMaterial'],
             exports: 'app'
         }
     }

@@ -7,6 +7,7 @@
     "bootstrap": "latest",
     "font-awesome": "latest",
     "angularjs": "latest",
+    "angular-route": "latest",
     "angular-material": "latest",
     "requirejs": "latest"
   }
