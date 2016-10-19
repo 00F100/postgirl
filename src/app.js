@@ -14,10 +14,7 @@ define(['jquery', 'bootstrap', 'angular', 'ngRoute', 'ngMaterial', 'app'], funct
 
 		initAngular: function(){
 			this.app = angular.module('app', ['ngMaterial']);
-			// this.app.controller('homeController', 'demoController');
-			this.app.controller('homeController', function($scope){
-				$scope.currentNavItem = 'collections';
-			});
+			this.app.controller('homeController', this.homeController);
 			angular.element(function() {
 				angular.bootstrap(document, ['app']);
 			});
@@ -27,6 +24,10 @@ define(['jquery', 'bootstrap', 'angular', 'ngRoute', 'ngMaterial', 'app'], funct
 			// $rootScope.$on('$routeChangeSuccess', function(event, current) {
 			// 	$scope.currentLink = getCurrentLinkFromRoute(current);
 			// });
+		},
+
+		homeController: function($scope){
+			$scope.currentNavItem = 'collections';
 		}
 	}
 
