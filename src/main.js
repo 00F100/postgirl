@@ -9,9 +9,9 @@ requirejs.config({
     paths: {
 
         // Controllers
-        homeController: 'src/controllers/HomeController',
-        collectionsController: 'src/controllers/CollectionsController',
-        historyController: 'src/controllers/HistoryController',
+        // homeController: 'src/controllers/HomeController',
+        // collectionsController: 'src/controllers/CollectionsController',
+        // historyController: 'src/controllers/HistoryController',
 
 
     	// jQuery minify
@@ -73,15 +73,15 @@ requirejs.config({
         },
 
         // Export Controllers
-        homeController: {
-            exports: 'homeController'
-        },
-        collectionsController: {
-            exports: 'collectionsController'
-        },
-        historyController: {
-            exports: 'historyController'
-        }
+        // homeController: {
+        //     exports: 'homeController'
+        // },
+        // collectionsController: {
+        //     exports: 'collectionsController'
+        // },
+        // historyController: {
+        //     exports: 'historyController'
+        // }
     }
 });
 

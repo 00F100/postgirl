@@ -18,9 +18,9 @@
 			this.app = angular.module('app', ['ngRoute', 'ngMaterial']);
 			
 			// Add controllers
-			this.app.controller('homeController', homeController);
-			this.app.controller('collectionsController', collectionsController);
-			this.app.controller('historyController', historyController);
+			// this.app.controller('homeController', homeController);
+			// this.app.controller('collectionsController', collectionsController);
+			// this.app.controller('historyController', historyController);
 
 			// Start Angular.js
 			angular.element(function() {
@@ -29,20 +29,20 @@
 		},
 
 		initRouter: function(){
-			this.app.config(function ($routeProvider) {
-		        $routeProvider.when("/", {
-		            templateUrl: 'views/home/collections.html',
-		            controller: 'homeController'
-		        });
-		        $routeProvider.when("/home/collections", {
-		            templateUrl: 'views/home/collections.html',
-		            controller: 'collectionsController'
-		        });
-		        $routeProvider.when("/home/history", {
-		            templateUrl: 'views/home/history.html',
-		            controller: 'historyController'
-		        });
-		    });
+			// this.app.config(function ($routeProvider) {
+		 //        $routeProvider.when("/", {
+		 //            templateUrl: 'views/home/collections.html',
+		 //            controller: 'homeController'
+		 //        });
+		 //        $routeProvider.when("/home/collections", {
+		 //            templateUrl: 'views/home/collections.html',
+		 //            controller: 'collectionsController'
+		 //        });
+		 //        $routeProvider.when("/home/history", {
+		 //            templateUrl: 'views/home/history.html',
+		 //            controller: 'historyController'
+		 //        });
+		 //    });
 		}
 	}
 

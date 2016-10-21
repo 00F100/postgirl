@@ -20,30 +20,45 @@
         </md-toolbar>
         <!-- / Topbar -->
 
-        <div flex layout="row" ng-controller="homeController">
+        <div flex layout="row">
 
             <!-- Sidebar -->
-            <md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp">
-
-                <!-- Options Sidebar -->
-                <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation collections">
-                    <md-nav-item  md-nav-href="#home/history" name="history">History</md-nav-item>
-                    <md-nav-item  md-nav-href="#home/collections" name="collections">Collections</md-nav-item>
-                </md-nav-bar>
-                <!-- / Options Sidebar -->
-
-                <!-- Content Sidebar -->
-                <md-content ng-view="view-a"></md-content>
-                <!-- / Content Sidebar -->
-
-            </md-sidenav>
+            <div flex="20">
+                <md-tabs md-dynamic-height="true" md-selected="itemSelected">
+                    <md-tab>
+                        <md-tab-label>History</md-tab-label>
+                        <md-tab-body>History content</md-tab-body>
+                    </md-tab>
+                    <md-tab>
+                        <md-tab-label>Collections</md-tab-label>
+                        <md-tab-body>
+                            <md-tabs md-dynamic-height="true" md-selected="subItemSelected">
+                                <md-tab>
+                                    <md-tab-label>All</md-tab-label>
+                                    <md-tab-body>All content</md-tab-body>
+                                </md-tab>
+                                <md-tab>
+                                    <md-tab-label>Me</md-tab-label>
+                                    <md-tab-body>Me content</md-tab-body>
+                                </md-tab>
+                                <md-tab>
+                                    <md-tab-label>Team</md-tab-label>
+                                    <md-tab-body>Team content</md-tab-body>
+                                </md-tab>
+                            </md-tabs>
+                        </md-tab-body>
+                    </md-tab>
+                </md-tabs>
+            </div>
             <!-- / Sidebar -->
 
             <!-- Content -->
-            <md-content flex id="content" ng-view="view-b">
-                content
-            </md-content>
+            <div flex="80">
+                <md-content flex id="content" ng-view>
+                </md-content>
+            </div>
             <!-- / Content -->
+
         </div>
     </body>
 </html>
