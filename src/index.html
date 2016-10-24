@@ -37,39 +37,38 @@
                                 <md-tab>
                                     <md-tab-label>All</md-tab-label>
                                     <md-tab-body>
+                                        <div>
+                                            <!-- Accordion -->
+                                            <v-accordion id="accordionCollectionsAll" class="vAccordion--default" control="accordionCollectionsAll" onexpand="expandCallback(index, id)" oncollapse="collapseCallback(index, id)">
+                                                <v-pane id="item-1" expanded="pane.isExpanded">
+                                                    <v-pane-header id="item-1-header" aria-controls="item-1-content">
+                                                        <h5>Name of project</h5>
+                                                    </v-pane-header>
+                                                    <v-pane-content id="item-1-content" aria-labelledby="item-1-header">
 
+                                                        <!-- Sub Accordion -->
+                                                        <v-accordion id="accordionCollectionsAllItem1" class="vAccordion--default" control="accordionCollectionsAllItem1" onexpand="expandCallback(index, id)" oncollapse="collapseCallback(index, id)">
+                                                            <v-pane id="item-1-1">
+                                                                <v-pane-header id="item-1-1-header" aria-controls="item-1-1-content">
+                                                                    <h5>Group routes</h5>
+                                                                </v-pane-header>
+                                                                <v-pane-content id="item-1-1-content" aria-labelledby="item-1-1-header">
+                                                                    <p>Route 1 A</p>
+                                                                    <p>Route 1 B</p>
+                                                                    <p>Route 1 C</p>
+                                                                </v-pane-content>
+                                                            </v-pane>
+                                                        </v-accordion>
+                                                        <!-- / Sub Accordion -->
 
-
-
-
-<v-accordion id="accordionA" class="vAccordion--default" control="accordionA" onexpand="expandCallback(index, id)" oncollapse="collapseCallback(index, id)">
-
-        <v-pane id="aaa" expanded="pane.isExpanded">
-          <v-pane-header id="aaa-header" aria-controls="aaa-content">
-            <h5>aaa</h5>
-          </v-pane-header>
-
-          <v-pane-content id="aaa-content" aria-labelledby="aaa-header">
-            <p>bbb</p>
-
-          </v-pane-content>
-        </v-pane>
-
-      </v-accordion>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                                        <p>Route A</p>
+                                                        <p>Route B</p>
+                                                        <p>Route C</p>
+                                                    </v-pane-content>
+                                                </v-pane>
+                                            </v-accordion>
+                                            <!-- / Accordion -->
+                                        </div>
                                     </md-tab-body>
                                 </md-tab>
                                 <md-tab>
@@ -89,7 +88,45 @@
 
             <!-- Content -->
             <div flex="80">
-                <md-content flex id="content" ng-view>
+                <md-content flex id="content">
+                    <md-tabs id="itemta" md-dynamic-height="true" md-selected="itemSelecteContent">
+                        <md-tab>
+                            <md-tab-label>/path/to/route</md-tab-label>
+                            <md-tab-body>
+                                <div flex layout="row">
+                                    <div flex="10">
+                                        <md-select ng-model="armor" class="md-no-underline" required md-no-asterisk="false">
+                                            <md-option value="cloth">GET</md-option>
+                                            <md-option value="leather">POST</md-option>
+                                            <md-option value="chain">OPTION</md-option>
+                                            <md-option value="plate">DELETE</md-option>
+                                        </md-select>
+                                    </div>
+                                    <div flex="70">
+                                        <div flex layout="row">
+                                            <div flex="85">
+                                                <md-input-container class="md-block">
+                                                    <input ng-model="user.title">
+                                                </md-input-container>
+                                            </div>
+                                            <div flex="15">
+                                                <md-button class="md-raised">Params</md-button>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div flex="20">
+                                        <md-button class="md-raised md-primary">Send</md-button>
+                                        <md-button class="md-raised">Save</md-button>
+                                    </div>
+                                </div>
+                            </md-tab-body>
+                        </md-tab>
+                        <md-tab>
+                            <md-tab-label>+</md-tab-label>
+                            <md-tab-body></md-tab-body>
+                        </md-tab>
+                    </md-tabs>
                 </md-content>
             </div>
             <!-- / Content -->

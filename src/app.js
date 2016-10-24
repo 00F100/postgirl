@@ -1,5 +1,5 @@
 // Dependency of app.js
-;define([/*'homeController', 'collectionsController', 'historyController', */'vAccordion'], function(/*homeController, collectionsController, historyController*/){
+;define(['ngRoute', 'ngMaterial', 'vAccordion'], function(){
 
 	"use strict";
 	
