@@ -1,5 +1,5 @@
 // Dependency of app.js
-;define(['homeController', 'collectionsController', 'historyController', 'angular'], function(homeController, collectionsController, historyController){
+;define([/*'homeController', 'collectionsController', 'historyController', */'vAccordion'], function(/*homeController, collectionsController, historyController*/){
 
 	"use strict";
 	
@@ -15,7 +15,7 @@
 		initAngular: function(){
 
 			// Init module app
-			this.app = angular.module('app', ['ngRoute', 'ngMaterial']);
+			this.app = angular.module('app', ['ngRoute', 'ngMaterial', 'vAccordion']);
 			
 			// Add controllers
 			// this.app.controller('homeController', homeController);

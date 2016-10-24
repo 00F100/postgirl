@@ -9,6 +9,7 @@
     "angularjs": "latest",
     "angular-route": "latest",
     "angular-material": "latest",
-    "requirejs": "latest"
+    "requirejs": "latest",
+    "v-accordion": "latest"
   }
 }

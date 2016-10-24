@@ -28,6 +28,8 @@ requirejs.config({
         ngAria: 'node_modules/angular-aria/angular-aria.min',
         // Angular.js Material
         ngMaterial: 'node_modules/angular-material/angular-material.min',
+        // Angular.js + Accordion
+        vAccordion: 'node_modules/v-accordion/dist/v-accordion.min',
         // The application
         app: 'src/app'
     },
@@ -66,11 +68,16 @@ requirejs.config({
             deps: ['ngAnimate', 'ngAria', 'ngRoute'],
             exports: 'ngMaterial'
         },
+        // Export Angular.js + Accordion
+        vAccordion: {
+            deps: ['ngAnimate'],
+            exports: 'vAccordion'
+        },
         // Export Angular.js Material - depends "ngMaterial"
         app: {
             deps: ['ngMaterial'],
             exports: 'app'
-        },
+        }
 
         // Export Controllers
         // homeController: {

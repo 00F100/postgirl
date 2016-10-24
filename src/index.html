@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
         <link rel="stylesheet" href="../node_modules/angular-material/angular-material.min.css" />
+        <link rel="stylesheet" href="../node_modules/v-accordion/dist/v-accordion.min.css" />
 
         <!-- Require.js -->
         <script data-main="main" src="../node_modules/requirejs/require.js"></script>
@@ -35,7 +36,41 @@
                             <md-tabs md-dynamic-height="true" md-selected="subItemSelected">
                                 <md-tab>
                                     <md-tab-label>All</md-tab-label>
-                                    <md-tab-body>All content</md-tab-body>
+                                    <md-tab-body>
+
+
+
+
+
+<v-accordion id="accordionA" class="vAccordion--default" control="accordionA" onexpand="expandCallback(index, id)" oncollapse="collapseCallback(index, id)">
+
+        <v-pane id="aaa" expanded="pane.isExpanded">
+          <v-pane-header id="aaa-header" aria-controls="aaa-content">
+            <h5>aaa</h5>
+          </v-pane-header>
+
+          <v-pane-content id="aaa-content" aria-labelledby="aaa-header">
+            <p>bbb</p>
+
+          </v-pane-content>
+        </v-pane>
+
+      </v-accordion>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    </md-tab-body>
                                 </md-tab>
                                 <md-tab>
                                     <md-tab-label>Me</md-tab-label>
