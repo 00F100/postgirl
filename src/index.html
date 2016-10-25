@@ -1,5 +1,6 @@
 <html>
     <head>
+        <title>Postgirl API smoking</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -25,6 +26,10 @@
 
             <!-- Sidebar -->
             <div flex="20">
+                <md-input-container class="md-block">
+                    <label>Filter</label>
+                    <input ng-model="user.title">
+                </md-input-container>
                 <md-tabs md-dynamic-height="true" md-selected="itemSelected">
                     <md-tab>
                         <md-tab-label>History</md-tab-label>
@@ -91,12 +96,12 @@
                 <md-content flex id="content">
                     <md-tabs id="itemta" md-dynamic-height="true" md-selected="itemSelecteContent">
                         <md-tab>
-                            <md-tab-label>/path/to/route</md-tab-label>
+                            <md-tab-label>Test Route</md-tab-label>
                             <md-tab-body>
                                 <div flex layout="row">
                                     <div flex="10">
-                                        <md-select ng-model="armor" class="md-no-underline" required md-no-asterisk="false">
-                                            <md-option value="cloth">GET</md-option>
+                                        <md-select ng-model="verb" class="md-no-underline" required md-no-asterisk="false">
+                                            <md-option value="cloth" selected>GET</md-option>
                                             <md-option value="leather">POST</md-option>
                                             <md-option value="chain">OPTION</md-option>
                                             <md-option value="plate">DELETE</md-option>
@@ -106,13 +111,64 @@
                                         <div flex layout="row">
                                             <div flex="85">
                                                 <md-input-container class="md-block">
+                                                    <label>URL</label>
                                                     <input ng-model="user.title">
                                                 </md-input-container>
                                             </div>
                                             <div flex="15">
-                                                <md-button class="md-raised">Params</md-button>
+                                                <md-input-container>
+                                                    <md-select ng-model="environment" class="md-no-underline" required md-no-asterisk="false">
+                                                        <md-option value="dev">DEV</md-option>
+                                                        <md-option value="hom">HOM</md-option>
+                                                        <md-option value="pro">PRO</md-option>
+                                                    </md-select>
+                                                </md-input-container>
                                             </div>
                                         </div>
+                                        <!-- Config request -->
+                                        <div flex layout="row">
+                                            <div flex="100">
+                                                <md-tabs md-dynamic-height="true" md-selected="itemContentSelected">
+                                                    <md-tab>
+                                                        <md-tab-label>Authorization</md-tab-label>
+                                                        <md-tab-body>Authorization content</md-tab-body>
+                                                    </md-tab>
+                                                    <md-tab>
+                                                        <md-tab-label>GET Params</md-tab-label>
+                                                        <md-tab-body>GET Params content</md-tab-body>
+                                                    </md-tab>
+                                                    <md-tab>
+                                                        <md-tab-label>Headers</md-tab-label>
+                                                        <md-tab-body>Headers content</md-tab-body>
+                                                    </md-tab>
+                                                    <md-tab>
+                                                        <md-tab-label>Headers</md-tab-label>
+                                                        <md-tab-body>Headers content</md-tab-body>
+                                                    </md-tab>
+                                                </md-tabs>
+                                            </div>
+                                        </div>
+                                        <!-- / Config request -->
+                                        <!-- Response -->
+                                        <div flex layout="row">
+                                            <div flex="100">
+                                                <md-tabs md-dynamic-height="true" md-selected="itemSubContentSelected">
+                                                    <md-tab>
+                                                        <md-tab-label>Body</md-tab-label>
+                                                        <md-tab-body>Body content</md-tab-body>
+                                                    </md-tab>
+                                                    <md-tab>
+                                                        <md-tab-label>Cookies</md-tab-label>
+                                                        <md-tab-body>Cookies content</md-tab-body>
+                                                    </md-tab>
+                                                    <md-tab>
+                                                        <md-tab-label>Headers</md-tab-label>
+                                                        <md-tab-body>Headers content</md-tab-body>
+                                                    </md-tab>
+                                                </md-tabs>
+                                            </div>
+                                        </div>
+                                        <!-- / Response -->
                                         
                                     </div>
                                     <div flex="20">
@@ -121,6 +177,10 @@
                                     </div>
                                 </div>
                             </md-tab-body>
+                        </md-tab>
+                        <md-tab>
+                            <md-tab-label>Test Route 2</md-tab-label>
+                            <md-tab-body></md-tab-body>
                         </md-tab>
                         <md-tab>
                             <md-tab-label>+</md-tab-label>
