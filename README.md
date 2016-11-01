@@ -2,7 +2,7 @@
 
 Free API test with localhost sync routes to team work! :)
 
-Use POstgirl and save users, collections, etc. in your localhost server.
+Use Postgirl and save users, collections, etc. in your localhost server.
 
 ## Install
 
@@ -14,7 +14,7 @@ $ cd postgirl
 $ npm install
 ```
 
-Open directory "src/"- in Browser with Google Chrome
+Open file "src/index.html" in browser Google Chrome
 
 ```sh
 $ google-chrome ./src/index.html
