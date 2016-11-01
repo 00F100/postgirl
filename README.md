@@ -1,11 +1,10 @@
-# FREE postman
-Free Postman with localhost sync :)
+# Postgirl
 
-Use Postman and save users, collections, etc. in your localhost server.
+Free API test with localhost sync routes to team work! :)
+
+Use POstgirl and save users, collections, etc. in your localhost server.
 
 
-### Codepen uses
+### Screenshot
 
-loading:
-
-[http://codepen.io/llsiddhantll/pen/ZQrGOg](http://codepen.io/llsiddhantll/pen/ZQrGOg)
+![Screenshot layout Postgirl](https://raw.githubusercontent.com/00F100/postgirl/master/screenshot.png)
