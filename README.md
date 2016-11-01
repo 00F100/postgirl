@@ -14,7 +14,17 @@ $ cd postgirl
 $ npm install
 ```
 
-Open directory "src/"- in Browser with apache, nginx, etc.
+Open directory "src/"- in Browser with Google Chrome
+
+```sh
+$ google-chrome ./src/index.html
+```
+
+Or Firefox
+
+```sh
+$ firefox ./src/index.html
+```
 
 ### Screenshot
 
