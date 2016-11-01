@@ -4,11 +4,10 @@
   "version": "0.1.0",
   "dependencies": {
     "jquery": "latest",
-    "bootstrap": "latest",
-    "font-awesome": "latest",
     "angularjs": "latest",
     "angular-route": "latest",
     "angular-material": "latest",
+    "material-design-icons": "latest",
     "requirejs": "latest",
     "v-accordion": "latest"
   }

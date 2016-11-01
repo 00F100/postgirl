@@ -6,8 +6,6 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 
         <!-- Bootstrap, Font Awesome, Angular Material -->
-        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
         <link rel="stylesheet" href="../node_modules/angular-material/angular-material.min.css" />
         <link rel="stylesheet" href="../node_modules/v-accordion/dist/v-accordion.min.css" />
 
@@ -28,102 +26,140 @@
             <div flex="20">
                 <md-input-container class="md-block">
                     <label>Filter</label>
-                    <input ng-model="user.title">
+                    <input ng-model="collections.find">
                 </md-input-container>
                 <md-tabs md-dynamic-height="true" md-selected="itemSelected">
+                    <!-- History Tab -->
                     <md-tab>
                         <md-tab-label>History</md-tab-label>
                         <md-tab-body>History content</md-tab-body>
                     </md-tab>
+                    <!-- / History Tab -->
+                    <!-- Collections Tab -->
                     <md-tab>
                         <md-tab-label>Collections</md-tab-label>
                         <md-tab-body>
                             <md-tabs md-dynamic-height="true" md-selected="subItemSelected">
+                                <!-- All Collections -->
                                 <md-tab>
                                     <md-tab-label>All</md-tab-label>
                                     <md-tab-body>
                                         <div>
-                                            <!-- Accordion -->
+                                            <!-- Projects -->
                                             <v-accordion id="accordionCollectionsAll" class="vAccordion--default" control="accordionCollectionsAll" onexpand="expandCallback(index, id)" oncollapse="collapseCallback(index, id)">
                                                 <v-pane id="item-1" expanded="pane.isExpanded">
                                                     <v-pane-header id="item-1-header" aria-controls="item-1-content">
                                                         <h5>Name of project</h5>
                                                     </v-pane-header>
                                                     <v-pane-content id="item-1-content" aria-labelledby="item-1-header">
-
-                                                        <!-- Sub Accordion -->
+                                                        <!-- Group items -->
                                                         <v-accordion id="accordionCollectionsAllItem1" class="vAccordion--default" control="accordionCollectionsAllItem1" onexpand="expandCallback(index, id)" oncollapse="collapseCallback(index, id)">
                                                             <v-pane id="item-1-1">
                                                                 <v-pane-header id="item-1-1-header" aria-controls="item-1-1-content">
                                                                     <h5>Group routes</h5>
                                                                 </v-pane-header>
+                                                                <!-- Items -->
                                                                 <v-pane-content id="item-1-1-content" aria-labelledby="item-1-1-header">
                                                                     <p>Route 1 A</p>
                                                                     <p>Route 1 B</p>
                                                                     <p>Route 1 C</p>
                                                                 </v-pane-content>
+                                                                <!-- / Items -->
                                                             </v-pane>
                                                         </v-accordion>
-                                                        <!-- / Sub Accordion -->
-
+                                                        <!-- / Group items -->
+                                                        <!-- Items -->
                                                         <p>Route A</p>
                                                         <p>Route B</p>
                                                         <p>Route C</p>
+                                                        <!-- / Items -->
                                                     </v-pane-content>
                                                 </v-pane>
                                             </v-accordion>
-                                            <!-- / Accordion -->
+                                            <!-- / Projects -->
                                         </div>
                                     </md-tab-body>
                                 </md-tab>
+                                <!-- / All Collections -->
+                                <!-- Me Collections -->
                                 <md-tab>
                                     <md-tab-label>Me</md-tab-label>
                                     <md-tab-body>Me content</md-tab-body>
                                 </md-tab>
+                                <!-- / Me Collections -->
+                                <!-- Team Collections -->
                                 <md-tab>
                                     <md-tab-label>Team</md-tab-label>
                                     <md-tab-body>Team content</md-tab-body>
                                 </md-tab>
+                                <!-- / Team Collections -->
                             </md-tabs>
                         </md-tab-body>
                     </md-tab>
+                    <!-- / Collections Tab -->
                 </md-tabs>
             </div>
             <!-- / Sidebar -->
-
             <!-- Content -->
             <div flex="80">
                 <md-content flex id="content">
+                    <!-- Tabs of requests -->
                     <md-tabs id="itemta" md-dynamic-height="true" md-selected="itemSelecteContent">
+                        <!-- Tab One -->
                         <md-tab>
+                            <!-- Tab Title -->
                             <md-tab-label>Test Route</md-tab-label>
+                            <!-- / Tab Title -->
                             <md-tab-body>
                                 <div flex layout="row">
-                                    <div flex="10">
-                                        <md-select ng-model="verb" class="md-no-underline" required md-no-asterisk="false">
-                                            <md-option value="cloth" selected>GET</md-option>
-                                            <md-option value="leather">POST</md-option>
-                                            <md-option value="chain">OPTION</md-option>
-                                            <md-option value="plate">DELETE</md-option>
-                                        </md-select>
-                                    </div>
-                                    <div flex="70">
+                                    <div flex="100">
                                         <div flex layout="row">
-                                            <div flex="85">
+                                            <!-- List of verbs -->
+                                            <div flex="10">
                                                 <md-input-container class="md-block">
-                                                    <label>URL</label>
-                                                    <input ng-model="user.title">
+                                                    <label>Method</label>
+                                                    <md-select ng-model="verb" aria-label="select 2" class="md-block" required md-no-asterisk="false">
+                                                        <md-option value="cloth" selected>GET</md-option>
+                                                        <md-option value="leather">POST</md-option>
+                                                        <md-option value="chain">OPTION</md-option>
+                                                        <md-option value="plate">DELETE</md-option>
+                                                    </md-select>
                                                 </md-input-container>
                                             </div>
+                                            <!-- / List of verbs -->
+                                            <!-- URL input -->
+                                            <div flex="55">
+                                                <md-input-container class="md-block">
+                                                    <label>URL</label>
+                                                    <input ng-model="user.title" required>
+                                                </md-input-container>
+                                            </div>
+                                            <!-- / URL input -->
+                                            <!-- Select Environment -->
                                             <div flex="15">
                                                 <md-input-container>
-                                                    <md-select ng-model="environment" class="md-no-underline" required md-no-asterisk="false">
+                                                    <label>Environment</label>
+                                                    <md-select ng-model="environment" class="md-block" required md-no-asterisk="false">
+                                                        <md-option value="main" selected>Main</md-option>
                                                         <md-option value="dev">DEV</md-option>
                                                         <md-option value="hom">HOM</md-option>
                                                         <md-option value="pro">PRO</md-option>
                                                     </md-select>
                                                 </md-input-container>
                                             </div>
+                                            <!-- Select Environment -->
+                                            <!-- Execute/Save buttons -->
+                                            <div flex="20">
+                                                <div flex layout="row">
+                                                    <div flex="50">
+                                                        <md-button class="md-raised md-primary">Send</md-button>
+                                                    </div>
+                                                    <div flex="50">
+                                                        <md-button class="md-raised left">Save</md-button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- / Execute/Save buttons -->
                                         </div>
                                         <!-- Config request -->
                                         <div flex layout="row">
@@ -155,7 +191,36 @@
                                                 <md-tabs md-dynamic-height="true" md-selected="itemSubContentSelected">
                                                     <md-tab>
                                                         <md-tab-label>Body</md-tab-label>
-                                                        <md-tab-body>Body content</md-tab-body>
+                                                        <md-tab-body>
+                                                            <div flex layout="row">
+                                                                <div flex="40">
+                                                                    <md-tabs md-dynamic-height="true" md-selected="itemContentSelectedBodyFormat">
+                                                                        <md-tab>
+                                                                            <md-tab-label>Pettry</md-tab-label>
+                                                                            <md-tab-body>Pettry content</md-tab-body>
+                                                                        </md-tab>
+                                                                        <md-tab>
+                                                                            <md-tab-label>Raw</md-tab-label>
+                                                                            <md-tab-body>Raw Params content</md-tab-body>
+                                                                        </md-tab>
+                                                                        <md-tab>
+                                                                            <md-tab-label>Preview</md-tab-label>
+                                                                            <md-tab-body>Preview content</md-tab-body>
+                                                                        </md-tab>
+                                                                    </md-tabs>
+                                                                </div>
+                                                                <div flex="15">
+                                                                    <md-select ng-model="verb" aria-label="select 1" class="md-no-underline" required md-no-asterisk="false">
+                                                                        <md-option value="HTML" selected>HTML</md-option>
+                                                                        <md-option value="JSON">JSON</md-option>
+                                                                        <md-option value="XML">XML</md-option>
+                                                                        <md-option value="Text">Text</md-option>
+                                                                    </md-select>
+                                                                </div>
+                                                                <div flex="45">
+                                                                </div>
+                                                            </div>
+                                                        </md-tab-body>
                                                     </md-tab>
                                                     <md-tab>
                                                         <md-tab-label>Cookies</md-tab-label>
@@ -169,28 +234,28 @@
                                             </div>
                                         </div>
                                         <!-- / Response -->
-                                        
-                                    </div>
-                                    <div flex="20">
-                                        <md-button class="md-raised md-primary">Send</md-button>
-                                        <md-button class="md-raised">Save</md-button>
                                     </div>
                                 </div>
                             </md-tab-body>
                         </md-tab>
+                        <!-- / Tab One -->
+                        <!-- Tab Two -->
                         <md-tab>
                             <md-tab-label>Test Route 2</md-tab-label>
                             <md-tab-body></md-tab-body>
                         </md-tab>
+                        <!-- / Tab Two -->
+                        <!-- Tab Three -->
                         <md-tab>
                             <md-tab-label>+</md-tab-label>
                             <md-tab-body></md-tab-body>
                         </md-tab>
+                        <!-- / Tab Three -->
                     </md-tabs>
+                    <!-- / Tabs of requests -->
                 </md-content>
             </div>
             <!-- / Content -->
-
         </div>
     </body>
 </html>
