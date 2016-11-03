@@ -3,8 +3,11 @@
 ## Please note: It is **work in progress**
 
  ☐ HTML layout
+
  ☐ Angular MVC
+
  ☐ Alpha version
+ 
  ☐ Beta version
 
 Free API test with localhost sync routes to team work! :)
