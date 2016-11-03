@@ -2,6 +2,9 @@
 
 ## Please note: It is **work in progress**
 
+- ✔ Require.js
+- ✔ Angular.js
+- ✔ Angular Material
 - ☐ HTML layout
 - ☐ Angular MVC
 - ☐ Alpha version
