@@ -2,13 +2,12 @@
 
 ## Please note: It is **work in progress**
 
- ☐ HTML layout
+- ☐ HTML layout
+- ☐ Angular MVC
+- ☐ Alpha version
+- ☐ Beta version
 
- ☐ Angular MVC
-
- ☐ Alpha version
- 
- ☐ Beta version
+===========================================
 
 Free API test with localhost sync routes to team work! :)
 
